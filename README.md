@@ -4,7 +4,7 @@ Reproducibility code and archived experimental results for the manuscript:
 
 > **Certificate-Coupled DCA for the Trust-Region Subproblem: Early Structural Escape and Progressive Global Certification**  
 > Author: Nguyen Thanh Binh
-> University of Science, Vietnam National University Ho Chi Minh City, Vietnam
+> (University of Science, Vietnam National University Ho Chi Minh City, Vietnam). Email: ngtbinh@hcmus.edu.vn
 
 This repository contains the implementation, experiment configuration, and archived numerical results for Experiments E1--E5 in the manuscript. The scientific source files under `cc_dca/` are the exact sources associated with the archived results.
 
