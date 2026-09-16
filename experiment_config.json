@@ -1,0 +1,52 @@
+{
+  "freeze_version": "M6-v1",
+  "global": {
+    "seeds": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+    "spectral_seed_offset": 100000,
+    "p_total": 0.1,
+    "rho_min": 0.001,
+    "work_caps": {"max_dca": 50000, "max_escapes": 1000},
+    "reference_tolerances": {"feasibility": 1e-8, "stationarity": 1e-8, "complementarity": 1e-8, "shifted_psd": 1e-8}
+  },
+  "E1": {
+    "dimensions": [50,100,200,400],
+    "stationarity_tolerance_post_and_plain": 1e-10,
+    "delta": 0.5,
+    "initial_mix": 0.35,
+    "primary_metric": "DCA updates before first structural correction"
+  },
+  "E2": {
+    "dimension": 200,
+    "alignment_eta": [0.0,1e-6,1e-5,1e-4,5e-4,9e-4],
+    "primary_metric": "R_dec=(q(x)-q(x_plus))/Delta"
+  },
+  "E3": {
+    "dimensions": [100,200,400,800],
+    "delta0": 1.0,
+    "beta": 0.5,
+    "n_stages": 5,
+    "final_delta": 0.0625,
+    "primary_metric": "R_Av=N_Av_cold/N_Av_persistent"
+  },
+  "E4": {
+    "dimensions": [100,200,400,800],
+    "delta0": 1.0,
+    "beta": 0.5,
+    "n_stages": 5,
+    "final_delta": 0.0625,
+    "comparison": "progressive persistent vs direct cold-final tolerance",
+    "primary_metrics": ["N_DCA","N_E","N_Av","objective_gap"]
+  },
+  "E5": {
+    "base_dimension": 200,
+    "dimension_grid": [100,200,400,800],
+    "spectral_gap_grid": [0.1,0.25,0.5,1.0,2.0],
+    "bottom_multiplicity_grid": [1,2,4,8,16],
+    "extra_negative_grid": [0,2,5,10,20],
+    "generic_random_robustness": {
+      "dimensions": [100,200,400],
+      "negative_fraction": [0.1,0.25],
+      "b_scale": [0.1,0.5]
+    }
+  }
+}

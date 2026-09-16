@@ -1,0 +1,159 @@
+{
+  "freeze": {
+    "freeze_version": "M6-v1",
+    "global": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "spectral_seed_offset": 100000,
+      "p_total": 0.1,
+      "rho_min": 0.001,
+      "work_caps": {
+        "max_dca": 50000,
+        "max_escapes": 1000
+      },
+      "reference_tolerances": {
+        "feasibility": 1e-08,
+        "stationarity": 1e-08,
+        "complementarity": 1e-08,
+        "shifted_psd": 1e-08
+      }
+    },
+    "E1": {
+      "dimensions": [
+        50,
+        100,
+        200,
+        400
+      ],
+      "stationarity_tolerance_post_and_plain": 1e-10,
+      "delta": 0.5,
+      "initial_mix": 0.35,
+      "primary_metric": "DCA updates before first structural correction"
+    },
+    "E2": {
+      "dimension": 200,
+      "alignment_eta": [
+        0.0,
+        1e-06,
+        1e-05,
+        0.0001,
+        0.0005,
+        0.0009
+      ],
+      "primary_metric": "R_dec=(q(x)-q(x_plus))/Delta"
+    },
+    "E3": {
+      "dimensions": [
+        100,
+        200,
+        400,
+        800
+      ],
+      "delta0": 1.0,
+      "beta": 0.5,
+      "n_stages": 5,
+      "final_delta": 0.0625,
+      "primary_metric": "R_Av=N_Av_cold/N_Av_persistent"
+    },
+    "E4": {
+      "dimensions": [
+        100,
+        200,
+        400,
+        800
+      ],
+      "delta0": 1.0,
+      "beta": 0.5,
+      "n_stages": 5,
+      "final_delta": 0.0625,
+      "comparison": "progressive persistent vs direct cold-final tolerance",
+      "primary_metrics": [
+        "N_DCA",
+        "N_E",
+        "N_Av",
+        "objective_gap"
+      ]
+    },
+    "E5": {
+      "base_dimension": 200,
+      "dimension_grid": [
+        100,
+        200,
+        400,
+        800
+      ],
+      "spectral_gap_grid": [
+        0.1,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "bottom_multiplicity_grid": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "extra_negative_grid": [
+        0,
+        2,
+        5,
+        10,
+        20
+      ],
+      "generic_random_robustness": {
+        "dimensions": [
+          100,
+          200,
+          400
+        ],
+        "negative_fraction": [
+          0.1,
+          0.25
+        ],
+        "b_scale": [
+          0.1,
+          0.5
+        ]
+      }
+    }
+  },
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "timestamp_utc": "2026-09-13T23:47:26.703574+00:00",
+  "code_sha256": {
+    "__init__.py": "2c939ccc236ee1f30a4472f7d46f676d6f5cc3046834bbe090985e1f8462a0d4",
+    "correction.py": "445a9463abeda36b9f5f7190b1967f68c162a0e7186ce7373f100dfc0405926e",
+    "experiments.py": "aa472345af79b1d83dad08cbaba8ab6718fdf359886899a4b82879d068fde6d3",
+    "krylov.py": "e08bdf141e0767a675ae8857a7968dfe5fd7cf0526d59ac40d2f960e3db212d4",
+    "logging_utils.py": "154c5032590ea8482dc63f58a466352ab79aa88b362869b67c0987e7274e6aa0",
+    "methods.py": "4bae98e4da2ca71a6a295f940e6431442e82f97b0a1424f4758d69a72503d7fd",
+    "problem.py": "ef7f6af4b8780718ddde686f9eaa009b1e61e5f8d3aeb58b42b09857303b9845",
+    "protocols.py": "d5ed7cdc0b949b0f83774201c83732760eb3ca0accd5fb2ea5dd7b27cc1098f1",
+    "reference.py": "dca33410d13b8319225e59b428e3d81347baa180ce7588125322a984b52554dd"
+  }
+}

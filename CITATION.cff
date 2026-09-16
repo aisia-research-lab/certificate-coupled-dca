@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or experimental results, please cite the accompanying manuscript."
+title: "CC-DCA Reproducibility Code"
+type: software
+authors:
+  - family-names: "Nguyen"
+    given-names: "Thanh Binh"
+version: "1.0.0-rc1"
+date-released: "2026-09-14"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Certificate-Coupled DCA for the Trust-Region Subproblem: Early Structural Escape and Progressive Global Certification"
+  authors:
+    - family-names: "Nguyen"
+      given-names: "Thanh Binh"
+  year: 2026
