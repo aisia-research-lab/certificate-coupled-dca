@@ -1,6 +1,6 @@
 # Certificate-Coupled DCA for the Trust-Region Subproblem
 
-Reproducibility code and archived experimental results for the manuscript (submitted to the journal SIAM Journal on Optimization):
+Reproducibility code and archived experimental results for the manuscript (under a submission):
 
 > **Certificate-Coupled DCA for the Trust-Region Subproblem: Early Structural Escape and Progressive Global Certification**  
 > Author: Nguyen Thanh Binh
